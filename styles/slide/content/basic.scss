@@ -3,9 +3,34 @@
 // ------------------------------------------------------------------
 
 h2 {
-	margin-bottom:34px;
-	color:$grey;
-	font:bold 50px/1 PT Sans Narrow, sans-serif;
+	// Config
+	$font-size: 50px;
+	$subtitle-font-size: 32px;
+
+	position: absolute;
+	left: 100px;
+	right: 100px;
+	top: 0;
+	color:white;
+	font:bold $font-size PT Sans Narrow, sans-serif;
+	line-height: $header-height;
+
+	&.shout {
+		color: $grey;
+		}
+
+	&.subtitle {
+		line-height: $header-height - $subtitle-font-size;
+		}
+
+	small {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: $font-size + 25px;
+		font:bold $subtitle-font-size PT Sans Narrow, sans-serif;
+		line-height: $subtitle-font-size;
+		}
 	}
 p {
 	margin-bottom:1em;
