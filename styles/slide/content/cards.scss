@@ -61,3 +61,56 @@ ul.cards {
         margin-left: 0;
     }
 }
+
+ul.cards.horizontal {
+    li {
+        // Config
+        $card-height: 5em;
+
+        width: 100%;
+        padding: 0.5em 1em 0.5em 6em;
+        margin: 0 0 1em 0;
+        height: $card-height;
+        background-color: lighten($grey, 55%);
+        float: none;
+        
+        h3 {
+            margin: 0;
+            padding:0;
+            text-align: left;
+            line-height: 1em;
+            font-weight: bold;
+            color: $grey;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            height: auto;
+            line-height: 1.5em;
+            font-size: 0.75em;
+            color: $grey;
+            border: none;
+        }
+
+        // Marker
+		&::before {
+            $scale: 2.5;
+
+            z-index: 1;
+			position: absolute;
+			left: 0;
+            top: 0;
+			height: $card-height/$scale;
+			width: $card-height/$scale;
+			text-align: center;
+            font-size: 1em * $scale;
+            line-height: $card-height/$scale;
+            background-color: $theme-color;
+            border: none;
+            border-radius: 0;
+			color: white;
+            font-weight: bold;
+		}
+    }
+}
