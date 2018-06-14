@@ -1,37 +1,53 @@
 // ------------------------------------------------------------------
 // Slide
 // ------------------------------------------------------------------
-// 1. Number ........... Red ribbon with page number
-// 2. Content .......... Various content types
-// 3. Modifiers......... Slide modifiers
-// 4. Elements ......... Content elements
+// 1. Background ....... Slide background style
+// 2. Number ........... Page number
+// 3. Content .......... Various content types
+// 4. Modifiers......... Slide modifiers
+// 5. Elements ......... Content elements
 // ------------------------------------------------------------------
 
 .slide {
+	// Config
+	$header-height: 125px;
 
 	position:relative;
 	z-index:1;
 	overflow:hidden;
-	padding:106px 100px 0;
+	padding:150px 100px 0;
 	width:$width;
 	height:$height;
 	background:#FFF;
 	font-size:25px;
 
+	// Background
+	&::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: $header-height;
+		background-color: #0071c6;
+		}
+
+	&.cover::before {
+		content: none;
+	}
+
 	// Number
 
 	&::after {
 		position:absolute;
-		top:0;
+		bottom:15px;
 		right:100px;
-		padding-top:15px;
-		width:50px;
-		height:100px;
-		background:url(../images/ribbon.svg) no-repeat;
-		color:#FFF;
+		color:#585a5e;
+		font-weight: bold;
 		counter-increment:slide;
 		content:counter(slide);
-		text-align:center;
+		text-align:right;
 		}
 
 	// Content
