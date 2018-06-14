@@ -21,10 +21,10 @@ ol {
 			width: 2em;
 			text-align: center;
 			top: 0.5em;
-			line-height: 1.8em;
+			line-height: 2em;
 			border-radius: 50%;
 			background-color: $theme-color;
-			border: 0.1em solid darken($theme-color, 10%);
+			// border: 0.1em solid darken($theme-color, 10%);
 			color: white;
 			font-weight: bold;
 		}
@@ -70,10 +70,10 @@ ul {
 			width: 2em;
 			text-align: center;
 			top: 0.5em;
-			line-height: 1.8em;
+			line-height: 2em;
 			border-radius: 50%;
 			background-color: $theme-color;
-			border: 0.1em solid darken($theme-color, 10%);
+			// border: 0.1em solid darken($theme-color, 10%);
 			color: white;
 			font-weight: bold;
 		}
