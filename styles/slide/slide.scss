@@ -11,6 +11,7 @@
 .slide {
 	// Config
 	$header-height: 125px;
+	$theme-color: #0071c6;
 
 	position:relative;
 	z-index:1;
@@ -30,7 +31,7 @@
 		left: 0;
 		right: 0;
 		height: $header-height;
-		background-color: #0071c6;
+		background-color: $theme-color;
 		}
 
 	&.cover::before {

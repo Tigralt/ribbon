@@ -11,23 +11,23 @@
 @font-face {
 	font-family:PT Sans;
 	src:url(../fonts/pt-sans-regular.woff) format('woff');
-	}
+}
 @font-face {
 	font-weight:bold;
 	font-family:PT Sans;
 	src:url(../fonts/pt-sans-bold.woff) format('woff');
-	}
+}
 @font-face {
 	font-style:italic;
 	font-family:PT Sans;
 	src:url(../fonts/pt-sans-italic.woff) format('woff');
-	}
+}
 @font-face {
 	font-style:italic;
 	font-weight:bold;
 	font-family:PT Sans;
 	src:url(../fonts/pt-sans-bold-italic.woff) format('woff');
-	}
+}
 
 // PT Narrow
 
@@ -35,11 +35,34 @@
 	font-family:PT Sans Narrow;
 	font-weight:bold;
 	src:url(../fonts/pt-sans-narrow-bold.woff) format('woff');
-	}
+}
 
 // PT Mono
 
 @font-face {
 	font-family:PT Mono;
 	src:url(../fonts/pt-mono-regular.woff) format('woff');
-	}
+}
+
+
+// Font Awesome
+@font-face {
+	font-family: 'Font Awesome';
+	font-style: normal;
+	font-weight: 900;
+	src:url('../fonts/fa-solid-900.woff') format('woff'),
+}
+
+@font-face {
+	font-family: 'Font Awesome';
+	font-style: normal;
+	font-weight: 400;
+	src:url('../fonts/fa-regular-400.woff') format('woff'),
+}
+
+@font-face {
+	font-family: 'Font Awesome Brands';
+	font-style: normal;
+	font-weight: normal;
+	src:url('../fonts/fa-brand-400.woff') format('woff'),
+}

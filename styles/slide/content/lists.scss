@@ -2,54 +2,110 @@
 // Lists
 // ------------------------------------------------------------------
 
-ol, ul {
-
+ol {
+	
 	margin-bottom:1em;
 	counter-reset:list;
-
-	li {
-
+	
+	> li {
+		
+		position: relative;
 		page-break-inside:avoid;
-		text-indent:-2em;
-
+		line-height: 3em;
+		
 		// Marker
-
 		&::before {
-			display:inline-block;
-			width:2em;
-			color:lighten($grey, 25%);
-			text-align:right;
-			}
-
+			position: absolute;
+			left: -2.5em;
+			height: 2em;
+			width: 2em;
+			text-align: center;
+			top: 0.5em;
+			line-height: 1.8em;
+			border-radius: 50%;
+			background-color: $theme-color;
+			border: 0.1em solid darken($theme-color, 10%);
+			color: white;
+			font-weight: bold;
 		}
 
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: -1.6em;
+			top: 1em;
+			width: 0;
+			height: 100%;
+			border-left: 0.2em dotted $grey;
+		}
+
+		&:last-child::after {
+			content: none;
+		}
+	}
+	
 	ol, ul {
 		margin-bottom:0;
 		margin-left:2em;
-		}
-
 	}
+}
+
+ul {
+	
+	margin-bottom:1em;
+	counter-reset:list;
+	
+	li {
+		
+		position: relative;
+		page-break-inside:avoid;
+		line-height: 3em;
+		
+		// Marker
+		&::before {
+			position: absolute;
+			left: -2.5em;
+			height: 2em;
+			width: 2em;
+			text-align: center;
+			top: 0.5em;
+			line-height: 1.8em;
+			border-radius: 50%;
+			background-color: $theme-color;
+			border: 0.1em solid darken($theme-color, 10%);
+			color: white;
+			font-weight: bold;
+		}
+	}
+	
+	ol, ul {
+		margin-bottom:0;
+		margin-left:2em;
+	}
+}
 
 // Markers
-
-ul > li::before {
-	padding-right:0.5em;
-	content:'•';
-	}
-ul > li:lang(ru)::before {
-	content:'—';
-	}
 ol > li::before {
-	padding-right:0.4em;
 	counter-increment:list;
-	content:counter(list)'.';
-	}
+	content:counter(list);
+}
 
 // Custom
-
-ol > li[value]::before {
-	content:attr(value)'.';
-	}
+ol > li[value]::before,
 ul > li[value]::before {
+	font-family: 'Font Awesome';
 	content:attr(value);
-	}
+}
+
+// Columns
+ul.column,
+ol.column {
+	width: calc(50% - 2.5em);
+}
+ul.column:nth-of-type(n+2),
+ol.column:nth-of-type(n+2) {
+	position: absolute;
+	top: $header-height + 25px;
+	left: calc(50% + 2.5em);
+}
