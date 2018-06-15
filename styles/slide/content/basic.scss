@@ -2,11 +2,11 @@
 // Basic
 // ------------------------------------------------------------------
 
-h2 {
+& > h2 {
 	// Config
 	$font-size: 50px;
 	$subtitle-font-size: 32px;
-
+	
 	position: absolute;
 	left: 100px;
 	right: 100px;
@@ -14,15 +14,15 @@ h2 {
 	color:white;
 	font:bold $font-size PT Sans Narrow, sans-serif;
 	line-height: $header-height;
-
+	
 	&.shout {
 		color: $grey;
-		}
-
+	}
+	
 	&.subtitle {
 		line-height: $header-height - $subtitle-font-size;
-		}
-
+	}
+	
 	small {
 		position: absolute;
 		left: 0;
@@ -30,11 +30,22 @@ h2 {
 		top: $font-size + 25px;
 		font:bold $subtitle-font-size PT Sans Narrow, sans-serif;
 		line-height: $subtitle-font-size;
-		}
 	}
+}
+
+&.title > h2 {
+	left: 50px;
+	right: calc(50% + 50px);
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 1em;
+	color: $theme-color;
+	text-align: center;
+}
+
 p {
 	margin-bottom:1em;
 	&.note {
 		color:lighten($grey, 25%);
-		}
 	}
+}

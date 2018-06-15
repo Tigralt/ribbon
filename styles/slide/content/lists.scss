@@ -7,7 +7,7 @@ ol {
 	margin-bottom:1em;
 	counter-reset:list;
 	
-	> li {
+	& > li {
 		
 		position: relative;
 		page-break-inside:avoid;
@@ -49,6 +49,10 @@ ol {
 		margin-bottom:0;
 		margin-left:2em;
 	}
+
+	&.no-line > li::after {
+		content: none;
+	}
 }
 
 ul {
@@ -56,7 +60,7 @@ ul {
 	margin-bottom:1em;
 	counter-reset:list;
 	
-	> li {
+	& > li {
 		
 		position: relative;
 		page-break-inside:avoid;
@@ -96,16 +100,4 @@ ol > li[value]::before,
 ul > li[value]::before {
 	font-family: 'Font Awesome';
 	content:attr(value);
-}
-
-// Columns
-ul.column,
-ol.column {
-	width: calc(50% - 2.5em);
-}
-ul.column:nth-of-type(n+2),
-ol.column:nth-of-type(n+2) {
-	position: absolute;
-	top: $header-height + 25px;
-	left: calc(50% + 2.5em);
 }

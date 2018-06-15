@@ -1,0 +1,23 @@
+// ------------------------------------------------------------------
+// Code
+// ------------------------------------------------------------------
+
+figure {
+    & > h2 {
+        line-height: 1em;
+        text-align: center;
+        color:white;
+	    font:bold 50px PT Sans Narrow, sans-serif;
+    }
+
+    & > p {
+        color: white;
+        text-align: center;
+    }
+
+    @for $i from 1 to 20 {
+        img.brightness-#{$i * 10} {
+            filter: brightness($i / 10);
+        }
+    }
+}

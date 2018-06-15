@@ -22,6 +22,25 @@
 	background:#FFF;
 	font-size:25px;
 
+	&.title {
+		padding: 0;
+
+		div {
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%);
+			color: white;
+			padding: 50px;
+
+			ul, ol {
+				li {
+					margin-left: 2.5em;
+				}
+			}
+		}
+	}
+
 	// Background
 	&::before {
 		content: '';
@@ -32,6 +51,15 @@
 		left: 0;
 		right: 0;
 		height: $header-height;
+		background-color: $theme-color;
+		}
+
+	&.title::before {
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		right: 0;
+		height: 100%;
 		background-color: $theme-color;
 		}
 
@@ -52,6 +80,10 @@
 		text-align:right;
 		}
 
+	&.title::after {
+		color: white;
+	}
+
 	// Content
 
 	@import
@@ -62,7 +94,8 @@
 		'content/table',
 		'content/code',
 		'content/footer',
-		'content/cards';
+		'content/cards',
+		'content/figure';
 
 	// Modifiers
 
