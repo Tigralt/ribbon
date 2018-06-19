@@ -27,7 +27,7 @@ div.timeline {
                 border-width: 1em 0 1em 0.5em;
                 border-style: solid;
                 border-color: $pointer-color $pointer-color $pointer-color transparent;
-                left: -1px;
+                left: 0em;
 
                 backface-visibility: hidden;
             }
@@ -40,7 +40,7 @@ div.timeline {
                 border-top: 1em solid transparent;
                 border-bottom: 1em solid transparent;
                 border-left: 0.5em solid $pointer-color;
-                right: -1px;
+                right: 0em;
 
                 backface-visibility: hidden;
             }
