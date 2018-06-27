@@ -84,6 +84,12 @@
 		color: white;
 	}
 
+	&.reverse-number::after {
+		right: initial;
+		left: 100px;
+		text-align: left;
+	}
+
 	// Content
 
 	@import
